@@ -11,6 +11,7 @@ sudo docker run -dit --name leaves \
     --restart=unless-stopped \
     -p 25565:25565 \
     -e MEMORY_MAX=8G \
+    -e JAVAFLAGS="-Duser.timezone=Asia/Shanghai" \
     -v /srv/leaves:/data \
     leavesmc/minecraft-leaves-server:1.21.4-33
 ```
