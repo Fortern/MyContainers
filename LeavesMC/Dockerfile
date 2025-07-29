@@ -1,7 +1,7 @@
 FROM eclipse-temurin:21-jdk
 
 EXPOSE 25565
-ENV MEMORY_MIN="2G" MEMORY_MAX="4G" JAVAFLAGS="-Dcom.mojang.eula.agree=true"
+ENV MEMORY_MIN="2G" MEMORY_MAX="4G" TIME_ZONE="UTC" JVM_ARGS=""
 VOLUME /data
 WORKDIR /data
 

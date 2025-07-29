@@ -7,8 +7,8 @@ if [ "$(id -u)" -eq 0 ]; then
   LEAVES_GROUP='leaves'
   
   if ! id "$LEAVES_USER" >/dev/null 2>&1; then
-    groupadd --system --gid 25565 $LEAVES_USER
-    useradd --system --uid 25565 --gid 25565 --home-dir /opt/leaves --no-create-home $LEAVES_GROUP
+    groupadd --system --gid 1500 $LEAVES_USER
+    useradd --system --uid 1500 --gid 1500 --home-dir /opt/leaves --no-create-home $LEAVES_GROUP
   fi
 
   chown -R $LEAVES_USER:$LEAVES_GROUP /data /opt/leaves
@@ -19,4 +19,4 @@ else
   JAVA_CMD="java"
 fi
 
-exec $JAVA_CMD -jar -Xms$MEMORY_MIN -Xmx$MEMORY_MAX $JAVAFLAGS /opt/leaves/leaves.jar nogui
+exec $JAVA_CMD -jar -Xms$MEMORY_MIN -Xmx$MEMORY_MAX -Duser.timezone=$TIME_ZONE $JVM_ARGS /opt/leaves/leaves.jar nogui
