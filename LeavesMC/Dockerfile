@@ -6,9 +6,9 @@ VOLUME /data
 WORKDIR /data
 
 RUN apt update && apt install -y gosu && apt clean && rm -rf /var/lib/apt/lists/*
+COPY --chmod=755 run_leaves.sh /opt/leaves/
 
 ARG URL
 ADD "${URL}" /opt/leaves/leaves.jar
-COPY --chmod=755 run_leaves.sh /opt/leaves
 
 CMD ["/opt/leaves/run_leaves.sh"]
