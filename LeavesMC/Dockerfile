@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk
+FROM bellsoft/liberica-openjdk-debian:21
 
 EXPOSE 25565
 ENV MEMORY_MIN="2G" MEMORY_MAX="4G" TIME_ZONE="UTC" JVM_ARGS=""
