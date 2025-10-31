@@ -26,10 +26,11 @@ sudo docker run -dit --name leaves \
 
 ## Supported Docker Environment Variables
 
-| Variable       | Purpose                                                                              |     Sample Value      |
-|----------------|--------------------------------------------------------------------------------------|:---------------------:|
-| **MEMORY_MIN** | 添加JVM参数"-Xms$MEMORY_MIN", Default: 2G                                                |          3G           |
-| **MEMORY_MAX** | 添加JVM参数"-Xms$MEMORY_MAX", Default: 4G                                                |          12G          |
-| **TIME_ZONE**  | 如果设置则添加JVM参数"-Duser.timezone=$TIME_ZONE", Default: "UTC"                             |     Asia/Shanghai     |
-| **EULA_AGREE** | 添加JVM参数"-Dcom.mojang.eula.agree=$EULA_AGREE", Default: "false"。 如果在eula.txt中设置，则忽略此项 |         true          |
-| **JVM_ARGS**   | 其他的JVM参数                                                                             | -Dhttp.proxyPort=2080 |
+| Variable         | Purpose                                                                              |     Sample Value      |
+|------------------|--------------------------------------------------------------------------------------|:---------------------:|
+| **MEMORY_MIN**   | 添加JVM参数"-Xms$MEMORY_MIN", Default: 2G                                                |          3G           |
+| **MEMORY_MAX**   | 添加JVM参数"-Xms$MEMORY_MAX", Default: 4G                                                |          12G          |
+| **TIME_ZONE**    | 添加JVM参数"-Duser.timezone=$TIME_ZONE", Default: "UTC"                                  |     Asia/Shanghai     |
+| **ENABLE_MAXIN** | 添加JVM参数"-Dleavesclip.enable.mixin=true", Default: "false"                            |         true          |
+| **EULA_AGREE**   | 添加JVM参数"-Dcom.mojang.eula.agree=$EULA_AGREE", Default: "false"。 如果在eula.txt中设置，则忽略此项 |         true          |
+| **JVM_ARGS**     | 其他的JVM参数                                                                            | -Dhttp.proxyPort=2080 |

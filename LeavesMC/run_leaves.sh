@@ -19,4 +19,4 @@ else
   JAVA_CMD="java"
 fi
 
-exec $JAVA_CMD -jar -Xms$MEMORY_MIN -Xmx$MEMORY_MAX -Duser.timezone=$TIME_ZONE $JVM_ARGS /opt/leaves/leaves.jar nogui
+exec $JAVA_CMD -jar -Xms$MEMORY_MIN -Xmx$MEMORY_MAX -Duser.timezone=$TIME_ZONE -Dcom.mojang.eula.agree=$EULA_AGREE -Dleavesclip.enable.mixin=$ENABLE_MAXIN $JVM_ARGS /opt/leaves/leaves.jar nogui
